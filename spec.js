@@ -11,8 +11,9 @@ describe('Preserver tests', function () {
       browser.get(URL)
       browser.sleep(5000)
 
-      browser.params.users[1]
+
     })
+
 
     //This function will be executed after each IT block in this DESCRIBE block
     afterEach(function () {
