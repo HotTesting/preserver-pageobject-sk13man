@@ -1,5 +1,7 @@
 //Импорт пейдж обджекта из другого файла
 let NotesPage = require('./pageObjects/NotesPage.js').NotesPage
+let MainPage = require('./pageObjects/MainPage.js').MainPage
+let ArchievePage = require('./pageObjects/ArchievePage.js').ArchievePage
 
 //Просто наш базовый URL для работы
 let URL = 'http://www.hiteshbalar.com/preserver/notes'
@@ -69,5 +71,47 @@ describe('Preserver tests', function () {
             'Notes count should be 0')
     })
     
+describe('Achieve tests', function() {
+    let archievePage = new ArchievePage()
+    let mainPage = new MainPage()
+  
+    beforeEach(function () {
+      browser.get(URL)
+      browser.sleep(3000)
+    })
 
+    //This function will be executed after each IT block in this DESCRIBE block
+    afterEach(function () {
+      // Wiping cookie files ONLY for current domain
+      browser.manage().deleteAllCookies()
+      // Wiping local and session storage
+      browser.executeScript('window.sessionStorage.clear(); window.localStorage.clear();')
+        .then(undefined,
+          function (err) {
+            // Errors will be thrown when browser is on default data URL.
+            // Session and Local storage is disabled for data URLs
+          })
+      //Wiping indexedDB     
+      browser.executeScript(`
+      indexedDB.webkitGetDatabaseNames().onsuccess = function(sender,args){
+            for (let dbname of sender.target.result) {
+                indexedDB.deleteDatabase(dbname)
+            }
+        };
+      `).then(undefined,
+          function (err) {
+            // Errors will be thrown when browser is on default data URL.
+            // indexedDB storage is disabled for data URLs
+        })
+    })
+ 
+    it('should be moved to Achieve Notes', function () {
+        mainPage.createNotes('Note for achieving', 'Archieve')
+        archievePage.archieveNote()
+        browser.sleep(3000)
+    
+    expect(archievePage.getNotes().count()).toBe(1, 'Notes count should be 1 after archieved')
+    })
+
+})
 })
