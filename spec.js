@@ -164,30 +164,5 @@ describe('Preserver Delete tests', function() {
     expect(recyclebin.getNotes().count()).toBe(1, 'Notes count in recycle bin should be 1')
     })
 
-})
 
 
-describe('Preserver tests About Page', function () {
-    
-    let about = new About()
-
-
-    it('should redirect to AboutPage from NotePage', function () {
-        
-        browser.get(URL)
-        browser.sleep(3000)
-        about.go()
-        browser.sleep(2000)
-        expect(browser.getCurrentUrl()).toBe('http://www.hiteshbalar.com/preserver/about')
-    })
-
-    it('all elements should be visible', function () {
-
-        browser.sleep(3000)
-        expect(about.left_arrow.isDisplayed()).toBe(true)
-        expect(about.github.isDisplayed()).toBe(true)
-        expect(about.twitter.isDisplayed()).toBe(true)
-        
-    })
-
-})
