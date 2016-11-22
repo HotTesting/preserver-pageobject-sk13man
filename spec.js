@@ -174,7 +174,7 @@ describe('Preserver tests About Page', function () {
 
     it('should redirect to AboutPage from NotePage', function () {
         
-        browser.get('./notes')
+        browser.get(URL)
         browser.sleep(3000)
         about.go()
         browser.sleep(2000)
