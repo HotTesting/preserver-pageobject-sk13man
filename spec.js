@@ -13,7 +13,7 @@ describe('Preserver tests', function () {
 
 beforeEach(function () {
       browser.get(URL)
-      browser.sleep(5000)
+      browser.sleep(3000)
 
     })
 
