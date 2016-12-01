@@ -11,12 +11,6 @@ let URL = 'http://www.hiteshbalar.com/preserver/notes'
 describe('Preserver tests', function () {
     let notesPage = new NotesPage()
 
-beforeEach(function () {
-      browser.get(URL)
-      browser.sleep(3000)
-
-    })
-
     //This function will be executed after each IT block in this DESCRIBE block
     afterEach(function () {
       // Wiping cookie files ONLY for current domain
@@ -79,10 +73,6 @@ describe('Preserver Achieve tests', function() {
     let archievePage = new ArchievePage()
     let mainPage = new MainPage()
   
-    beforeEach(function () {
-      browser.get(URL)
-      browser.sleep(5000)
-    })
 
     //This function will be executed after each IT block in this DESCRIBE block
     afterEach(function () {
@@ -124,12 +114,7 @@ describe('Preserver Delete tests', function() {
     let recyclebin = new RecycleBin()
     let mainPage = new MainPage()
    
-    beforeEach(function () {
-      browser.get(URL)
-      browser.sleep(2000)
-
-    })
-
+ 
     //This function will be executed after each IT block in this DESCRIBE block
     afterEach(function () {
       // Wiping cookie files ONLY for current domain
