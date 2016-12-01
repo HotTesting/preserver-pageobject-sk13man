@@ -6,7 +6,7 @@ let RecycleBin = require('./pageObjects/RecycleBin.js').RecycleBin
 let About = require('./pageObjects/AboutPage.js').About
 
 //Просто наш базовый URL для работы
-let URL = 'http://www.hiteshbalar.com/preserver/notes'
+//let URL = 'http://www.hiteshbalar.com/preserver/notes'
 
 describe('Preserver tests', function () {
     let notesPage = new NotesPage()
@@ -159,8 +159,7 @@ describe('Preserver tests About Page', function () {
 
     it('should redirect to AboutPage from NotePage', function () {
         
-        browser.get(URL)
-        browser.sleep(3000)
+    
         about.openAbout()
         browser.sleep(2000)
         expect(browser.getCurrentUrl()).toBe('http://www.hiteshbalar.com/preserver/about')
@@ -168,7 +167,8 @@ describe('Preserver tests About Page', function () {
 
     it('all elements should be visible', function () {
 
-        browser.sleep(3000)
+        about.openAbout()
+        browser.sleep(2000)
         expect(about.left_arrow.isDisplayed()).toBe(true)
         expect(about.github.isDisplayed()).toBe(true)
         expect(about.twitter.isDisplayed()).toBe(true)

@@ -7,10 +7,11 @@ jasmineNodeOpts: {
   showColours: true
 },
 
+
 onPrepare: function() { 
   
    beforeEach(function () {
-      browser.get(URL)
+      browser.get('http://www.hiteshbalar.com/preserver/notes')
       browser.sleep(3000)
 
     })
