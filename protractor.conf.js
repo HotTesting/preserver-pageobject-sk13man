@@ -1,6 +1,6 @@
 module.exports.config = {
     useAllAngular2AppRoots: true,
-    specs: '*_spec.js',
+    specs: '*spec.js',
     directConnect: true,
     jasmineNodeOpts: {
         print: function() {}
