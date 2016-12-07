@@ -14,9 +14,9 @@ describe('Preserver tests', function () {
     //This function will be executed after each IT block in this DESCRIBE block
     afterEach(function () {
       // Wiping cookie files ONLY for current domain
-      browser.manage().deleteAllCookies()
+        browser.manage().deleteAllCookies()
       // Wiping local and session storage
-      browser.executeScript('window.sessionStorage.clear(); window.localStorage.clear();')
+        browser.executeScript('window.sessionStorage.clear(); window.localStorage.clear();')
         .then(undefined,
           function (err) {
             // Errors will be thrown when browser is on default data URL.
@@ -69,9 +69,9 @@ describe('Preserver tests', function () {
 
 })
 
-describe('Preserver Achieve tests', function() {
-    let archievePage = new ArchievePage()
-    let mainPage = new MainPage()
+    describe('Preserver Achieve tests', function() {
+        let archievePage = new ArchievePage()
+        let mainPage = new MainPage()
   
 
     //This function will be executed after each IT block in this DESCRIBE block
@@ -109,10 +109,9 @@ describe('Preserver Achieve tests', function() {
     })
 
 })
-
-describe('Preserver Delete tests', function() {
-    let recyclebin = new RecycleBin()
-    let mainPage = new MainPage()
+     describe('Preserver Delete tests', function() {
+      let recyclebin = new RecycleBin()
+      let mainPage = new MainPage()
    
  
     //This function will be executed after each IT block in this DESCRIBE block
@@ -155,12 +154,8 @@ describe('Preserver Delete tests', function() {
 describe('Preserver tests About Page', function () {
     
     let about = new About()
-
-
-    it('should redirect to AboutPage from NotePage', function () {
-        
-    
-        about.openAbout()
+   it('should redirect to AboutPage from NotePage', function () {
+       about.openAbout()
         browser.sleep(2000)
         expect(browser.getCurrentUrl()).toBe('http://www.hiteshbalar.com/preserver/about')
     })
