@@ -13,6 +13,7 @@ class NotesPage {
         this.newNoteTitleField.click()
         this.newNoteTitleField.sendKeys(title)
         element(by.buttonText('Save')).click()
+        browser.sleep(2000)
     }
 
     //Получим коллекцию всех заметок которые есть на этой странице

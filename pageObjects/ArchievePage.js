@@ -10,7 +10,7 @@ class ArchievePage {
         this.buttonToArchieve.click()
         this.pageArchieveNotes.click()
         this.archieveLink.click()
-
+           browser.sleep(2000)
     }
 
     //Получим коллекцию всех заметок которые есть на этой странице
