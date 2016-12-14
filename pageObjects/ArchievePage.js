@@ -6,7 +6,7 @@ class ArchievePage {
         this.archieveLink = $(" .navbar-right a[href='/preserver/archive-notes']")
     }
 
-       archieveNote() {
+        archieveNote() {
         this.buttonToArchieve.click()
         this.pageArchieveNotes.click()
         this.archieveLink.click()
