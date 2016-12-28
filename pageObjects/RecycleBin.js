@@ -12,6 +12,9 @@ class RecycleBin {
         this.pageDeleteNotes.click()
         this.DeleteLink.click()
            browser.sleep(2000)
+           //
+           //
+           //
 
     }
 
