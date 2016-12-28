@@ -12,6 +12,7 @@ class MainPage {
         this.newNoteTitleField.click()
         this.newNoteTitleField.sendKeys(title)
         element(by.buttonText('Save')).click()
+        browser.sleep(2000)
     }
 }
 

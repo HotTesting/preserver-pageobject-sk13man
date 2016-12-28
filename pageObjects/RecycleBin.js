@@ -11,7 +11,12 @@ class RecycleBin {
         this.buttonToDelete.click()
         this.pageDeleteNotes.click()
         this.DeleteLink.click()
+           browser.sleep(2000)
+           //
+           //
 
+           //
+           //
     }
 
     //Получим коллекцию всех заметок которые есть на этой странице

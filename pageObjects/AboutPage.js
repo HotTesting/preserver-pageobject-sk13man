@@ -15,6 +15,7 @@ class About {
      openAbout() {
         this.openMenuButton.click()
         this.aboutButton.click()
+         browser.sleep(2000)
        }
  
 }

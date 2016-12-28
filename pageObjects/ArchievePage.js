@@ -6,11 +6,11 @@ class ArchievePage {
         this.archieveLink = $(" .navbar-right a[href='/preserver/archive-notes']")
     }
 
-       archieveNote() {
+        archieveNote() {
         this.buttonToArchieve.click()
         this.pageArchieveNotes.click()
         this.archieveLink.click()
-
+           browser.sleep(2000)
     }
 
     //Получим коллекцию всех заметок которые есть на этой странице
