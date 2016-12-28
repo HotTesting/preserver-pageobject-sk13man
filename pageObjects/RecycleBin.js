@@ -14,7 +14,6 @@ class RecycleBin {
            browser.sleep(2000)
            //
            //
-           //
 
     }
 
