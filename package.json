@@ -6,7 +6,7 @@
     "postinstall": "webdriver-manager update",
     "test": "protractor"
   },
-  "author": "Sergey Golovin
+  "author": "Sergey Golovin",
   "license": "MIT",
 
   "dependencies":{
