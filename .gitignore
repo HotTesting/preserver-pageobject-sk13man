@@ -1,1 +1,7 @@
 node_modules/
+.idea/
+.idea/inspectionProfiles/
+.idea/modules.xml
+.idea/preserver-pageobject-sk13man.iml
+.idea/vcs.xml
+.idea
