@@ -19,20 +19,20 @@ describe('Preserver tests', function () {
     it('should be created when only title provided', function () {
 
         notesPage.createNote('Test', '')
-        expect(notesPage.getNotes().count()).toBe(1, 'Notes count should be 1 after created')
+        expect(notesPage.getNotes().count()).toBe(2, 'Notes count should be 1 after created')
     })
 
     it('should be created when only body provided', function () {
 
         notesPage.createNote('', 'Test')
-        expect(notesPage.getNotes().count()).toBe(1, 'Notes count should be 1 after created')
+        expect(notesPage.getNotes().count()).toBe(3, 'Notes count should be 1 after created')
 
     })
 
-    it('should NOT be created when nothing provided', function () {
+    it('should NOT be created ', function () {
 
         notesPage.createNote('', '')
-        expect(notesPage.getNotes().count()).toBe(0, 'Notes count should be 0')
+        expect(notesPage.getNotes().count()).toBe(3, 'Notes count should be 0')
 
     })
 
